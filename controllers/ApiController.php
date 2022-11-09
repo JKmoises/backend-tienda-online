@@ -1,13 +1,22 @@
 <?php
 namespace Controllers;
 
-use Model\Producto;
+use Model\ProductoCategoria;
 
 class ApiController{
 
   public static function index(){
-    $productos = Producto::all();
-    
-    echo json_encode($productos);
+    $category = $_GET["categoria"] ?? '';
+
+    $query  = "SELECT p.id, p.name, p.url_image,p.price,p.discount,c.name AS category FROM product p ";
+    $query .= "JOIN category c ON p.category = c.id";
+    if ($category) {
+      $query .= " WHERE c.name = '{$category}'";
+    }
+
+    $productosPorCategoria = ProductoCategoria::SQL($query);
+
+    echo json_encode($productosPorCategoria);
   }
+
 }

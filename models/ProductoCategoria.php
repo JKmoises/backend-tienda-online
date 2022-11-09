@@ -1,8 +1,8 @@
-<?php 
+<?php
 namespace Model;
 
-class Producto extends ActiveRecord{
-  protected static $tabla = 'product';
+class ProductoCategoria extends ActiveRecord{
+  protected static $tabla = 'productsCategory';
   protected static $columnasDB = [
     'id',
     'name',
@@ -27,8 +27,4 @@ class Producto extends ActiveRecord{
     $this->discount = $args['discount'] ?? '';
     $this->category = $args['category'] ?? '';
   }
-
-
-
-
 }

@@ -9,28 +9,10 @@ class ActiveRecord{
   protected static $tabla = '';
   protected static $columnasDB = [];
 
-  // Alertas y Mensajes
-  protected static $alertas = [];
 
   // Definir la conexión a la BD - includes/database.php
   public static function setDB($database){
     self::$db = $database;
-  }
-
-  // Setear un tipo de Alerta
-  public static function setAlerta($tipo, $mensaje){
-    static::$alertas[$tipo][] = $mensaje;
-  }
-
-  // Obtener las alertas
-  public static function getAlertas(){
-    return static::$alertas;
-  }
-
-  // Validación que se hereda en modelos
-  public function validar(){
-    static::$alertas = [];
-    return static::$alertas;
   }
 
   // Consulta SQL para crear un objeto en Memoria (Active Record)
@@ -131,6 +113,13 @@ class ActiveRecord{
     $query = "SELECT * FROM " . static::$tabla . " WHERE ${columna} = '${valor}'";
     $resultado = self::consultarSQL($query);
     return array_shift($resultado);
+  }
+
+  // Consulta Plana de SQL 
+  public static function SQL($query){
+    $resultado = self::consultarSQL($query);
+
+    return $resultado;
   }
 
   // crea un nuevo registro

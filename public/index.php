@@ -8,7 +8,7 @@ use MVC\Router;
 $router = new Router();
 
 
-$router->get('/productos',[ApiController::class,'index']);
+$router->get('/api/productos',[ApiController::class,'index']);
 
 
 $router->comprobarRutas();

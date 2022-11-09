@@ -2,8 +2,7 @@
 
 namespace MVC;
 
-class Router
-{
+class Router{
   public array $getRoutes = [];
   public array $postRoutes = [];
 
@@ -17,9 +16,7 @@ class Router
     $this->postRoutes[$url] = $fn;
   }
 
-  public function comprobarRutas()
-  {
-
+  public function comprobarRutas(){
     $url_actual = $_SERVER['PATH_INFO'] ?? '/';
     $method = $_SERVER['REQUEST_METHOD'];
 
@@ -34,20 +31,5 @@ class Router
     } else {
       echo "Página No Encontrada o Ruta no válida";
     }
-  }
-
-  public function render($view, $datos = [])
-  {
-    foreach ($datos as $key => $value) {
-      $$key = $value;
-    }
-
-    ob_start();
-
-    include_once __DIR__ . "/views/$view.php";
-
-    $contenido = ob_get_clean(); // Limpia el Buffer
-
-    include_once __DIR__ . '/views/layout.php';
   }
 }
