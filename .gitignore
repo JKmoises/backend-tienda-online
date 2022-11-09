@@ -1,0 +1,4 @@
+vendor
+includes/.env
+composer.json
+composer.lock
