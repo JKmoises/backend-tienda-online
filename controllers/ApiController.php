@@ -15,6 +15,7 @@ class ApiController{
     }
 
     $productosPorCategoria = ProductoCategoria::SQL($query);
+    debuguear($productosPorCategoria);
 
     echo json_encode($productosPorCategoria);
   }
