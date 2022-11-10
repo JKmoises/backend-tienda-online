@@ -1,0 +1,14 @@
+{
+  "name": "moises/backend-tienda",
+  "description": "Backend Tienda Online",
+  "autoload": {
+    "psr-4": {
+      "MVC\\": "./",
+      "Controllers\\": "./controllers",
+      "Model\\": "./models"
+    }
+  },
+  "require": {
+    "vlucas/phpdotenv": "^5.4"
+  }
+}
