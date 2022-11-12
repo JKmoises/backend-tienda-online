@@ -9,6 +9,7 @@ $router = new Router();
 
 
 $router->get('/api/productos',[ApiController::class,'index']);
+$router->get('/api/productos?categoria=todas',[ApiController::class,'productosCategoria']);
 $router->get('/api/productos?categoria=bebida%20energetica',[ApiController::class,'productosCategoria']);
 $router->get('/api/productos?categoria=pisco',[ApiController::class,'productosCategoria']);
 $router->get('/api/productos?categoria=bebida',[ApiController::class,'productosCategoria']);

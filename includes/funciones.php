@@ -6,7 +6,9 @@ function debuguear($variable) : string {
   echo "</pre>";
   exit;
 }
-function s($html) : string {
-  $s = htmlspecialchars($html);
-  return $s;
+function includeHeaders() : void {
+  header("Access-Control-Allow-Origin: *");
+  header("Content-Type: application/json");
 }
+
+

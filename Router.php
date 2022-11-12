@@ -17,6 +17,8 @@ class Router{
   }
 
   public function comprobarRutas(){
+    includeHeaders();
+    
     $url_actual = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
     $method = $_SERVER['REQUEST_METHOD'];
 
@@ -29,7 +31,7 @@ class Router{
     if ($fn) {
       call_user_func($fn, $this);
     } else {
-      echo "Página No Encontrada o Ruta no válida";
+      echo json_encode([]);
     }
   }
 }
