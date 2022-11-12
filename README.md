@@ -3,7 +3,7 @@
 ![PHP API REST](https://2.bp.blogspot.com/-8S0LVYAxT-M/WHGAUwDNGzI/AAAAAAAAB_U/jmlnEz0mmPkz4meyYocDPhLDS72DXY1AwCLcB/s1600/API-Using-PHP.jpg)
 
 ## Tecnologías:
-Para el desarrollo de la _API REST_ se usaron las siguientes tecnologías:
+Para el desarrollo de esta _API REST_ se usaron las siguientes tecnologías:
 - **_PHP:_** Con este lenguaje de _backend_ se crean los _endpoints_, _Api en formato JSON_, etc.
 - **_SQL:_** Con este lenguaje de consulta se accede a la base de datos de **MySQL** para la construcción de la _API REST_.
 - **_Composer:_** Gestor de dependencias de **PHP** para instalar las librerías necesarias para el desafío.
@@ -22,7 +22,7 @@ Esta _API_ usa los siguientes patrones de arquitectura:
 ### Model View Controller (MVC):
 Este patrón nos permite desacoplar el código para que sea mantenible o escalable.
 
-- **_Model:_** Se encarga de consultar a la _BD_ y crear el modelo de una respectiva tabla.
+- **_Model:_** Se encarga de consultar a la _BD_ y crear el _modelo_ de una respectiva tabla.
 - **_View:_** Se encarga de todo lo que se ve en pantalla, en este caso como es un _API REST_ se renderizarán datos en formato _JSON_.
 - **_Controller_:** Comunica el _Modelo_ con la _Vista_, antes que el _Modelo_ consulte la _BD_. También contiene toda la lógica de la _API_.
 - **_Router:_** Registra todas las _URL's_ o _endpoints_ de la _API_. Cada _endpoint_ tiene un _Controlador_ asociado.
@@ -32,7 +32,7 @@ Este patrón nos permite desacoplar el código para que sea mantenible o escalab
 
 | Carpeta / Archivo | Funcionalidad | 
 | --------- | --------- | 
-| `/controllers`        | Guardar los **controladores** creados
+| `/controllers`        | Guarda los **controladores** creados
 | `/includes`         | Contiene las _variables de entorno_, funciones globales y configuración a la base de datos.         
 | `/models`         | Contiene todos los **modelos** creados        
 | `/models/ActiveRecord.php` | _Clase_ que hereda a los _modelos_ ya que tiene todos las propiedades y métodos para comunicarse con la _BD_.       
