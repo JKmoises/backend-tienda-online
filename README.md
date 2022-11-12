@@ -1,5 +1,7 @@
 # Desafio _Backend_ - **Bsale** 
 
+![PHP API REST](https://2.bp.blogspot.com/-8S0LVYAxT-M/WHGAUwDNGzI/AAAAAAAAB_U/jmlnEz0mmPkz4meyYocDPhLDS72DXY1AwCLcB/s1600/API-Using-PHP.jpg)
+
 ## Tecnologías:
 Para el desarrollo de la _API REST_ se usaron las siguientes tecnologías:
 - **_PHP:_** Con este lenguaje de _backend_ se crean los _endpoints_, _Api en formato JSON_, etc.
@@ -24,4 +26,19 @@ Este patrón nos permite desacoplar el código para que sea mantenible o escalab
 - **_View:_** Se encarga de todo lo que se ve en pantalla, en este caso como es un _API REST_ se renderizarán datos en formato _JSON_.
 - **_Controller_:** Comunica el _Modelo_ con la _Vista_, antes que el _Modelo_ consulte la _BD_. También contiene toda la lógica de la _API_.
 - **_Router:_** Registra todas las _URL's_ o _endpoints_ de la _API_. Cada _endpoint_ tiene un _Controlador_ asociado.
+
+---
+## Estructura de carpetas y archivos:
+
+| Carpeta / Archivo | Funcionalidad | 
+| --------- | --------- | 
+| `/controllers`        | Guardar los **controladores** creados
+| `/includes`         | Contiene las _variables de entorno_, funciones globales y configuración a la base de datos.         
+| `/models`         | Contiene todos los **modelos** creados        
+| `/models/ActiveRecord.php` | _Clase_ que hereda a los _modelos_ ya que tiene todos las propiedades y métodos para comunicarse con la _BD_.       
+| `/public`         | Contiene el archivo con todos los _endpoints_ de la api.        
+| `/vendor`         | Carpeta que guarda las dependecias instaladas con _composer_.        
+| `.gitignore`         | Establece carpetas o archivos que son de desarrollo y no tendrán seguimiento con _Git_.        
+| `composer.json`         | Archivo de configuración de dependencias de _PHP_.        
+| `Router.php`         | _Clase_ que contiene los métodos para definir los _endpoints_ ya sea vía `GET` o `POST`.   
 
