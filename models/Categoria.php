@@ -1,5 +1,4 @@
 <?php
-
 namespace Model;
 
 class Categoria extends ActiveRecord{

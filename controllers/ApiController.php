@@ -1,6 +1,7 @@
 <?php
 namespace Controllers;
 
+use Model\Categoria;
 use Model\ProductoCategoria;
 
 class ApiController{
@@ -21,8 +22,12 @@ class ApiController{
     echo json_encode($productosPorCategoria);
   }
 
-  public function categoria(){
-    
+  public static function categorias(){
+    $categories = Categoria::all();
+
+    header("Access-Control-Allow-Origin: *");
+    header("Content-Type: application/json");
+    echo json_encode($categories);
   }
 
 }
