@@ -16,6 +16,7 @@ $router->get('/api/productos?categoria=snack',[ApiController::class,'index']);
 $router->get('/api/productos?categoria=ron',[ApiController::class,'index']);
 $router->get('/api/productos?categoria=cerveza',[ApiController::class,'index']);
 $router->get('/api/productos?categoria=vodka',[ApiController::class,'index']);
+$router->get('/api/categorias',[ApiController::class,'categorias']);
 
 
 $router->comprobarRutas();

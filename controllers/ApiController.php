@@ -21,4 +21,8 @@ class ApiController{
     echo json_encode($productosPorCategoria);
   }
 
+  public function categoria(){
+    
+  }
+
 }
